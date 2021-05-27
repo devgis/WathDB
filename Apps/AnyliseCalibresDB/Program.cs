@@ -70,7 +70,7 @@ namespace AnyliseCalibresDB
             }
             File.WriteAllText(outfile, JsonConvert.SerializeObject(Calibres));
             Console.WriteLine();
-            Console.WriteLine(@"Done! Saved:{Calibres.Count}");
+            Console.WriteLine($"Done! Saved:{Calibres.Count}");
             Console.Read();
         }
 

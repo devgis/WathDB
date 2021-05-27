@@ -1,0 +1,13 @@
+
+Apps/AnyliseCalibresDB/bin/
+Apps/AnyliseCalibresDB/obj/
+Apps/.vs/WatchDBApps/v16/.suo
+Apps/.vs/WatchDBApps/DesignTimeBuild/.dtbcache.v2
+Apps/Common/bin/
+Apps/Common/obj/
+Apps/GetCALIBRES/bin/
+Apps/GetCALIBRES/obj/
+Apps/WatchDBApp/obj/
+Apps/WatchDBApp/bin/
+Apps/WatchDBApps/obj/
+Apps/WatchDBApps/bin/

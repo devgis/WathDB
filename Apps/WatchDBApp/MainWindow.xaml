@@ -6,7 +6,29 @@
         xmlns:local="clr-namespace:WatchDBApp"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
+    <Window.DataContext>
+
+        <local:MainWindowViewModel/>
+
+    </Window.DataContext>
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="100" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <TextBox Grid.Row="0" Grid.Column="1"/>
+        <Button Content="Search" Grid.Row="0" Grid.Column="2"/>
+        <TreeView ItemsSource="{Binding Calibres}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="999">
+            <TreeView.ItemTemplate>
+                <HierarchicalDataTemplate>
+                    <TextBlock Text="{Binding ModelName}"/>
+                </HierarchicalDataTemplate>
+            </TreeView.ItemTemplate>
+        </TreeView>
     </Grid>
 </Window>

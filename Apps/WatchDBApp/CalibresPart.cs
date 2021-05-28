@@ -2,23 +2,21 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Common
+namespace WatchDBApp
 {
-    public class CalibreInfo
+    public class CalibresPart
     {
-        public string ModelName
+        public string Description
         {
             get;
             set;
         }
-
-        public string Desc
+        public string Alternate
         {
             get;
             set;
         }
-
-        public string URL
+        public double Price
         {
             get;
             set;

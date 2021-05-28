@@ -26,7 +26,14 @@
         <TreeView ItemsSource="{Binding Calibres}" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="999">
             <TreeView.ItemTemplate>
                 <HierarchicalDataTemplate>
-                    <TextBlock Text="{Binding ModelName}"/>
+                    <StackPanel Orientation="Vertical">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Width="32" Height="31" Source="eta.jpg"  />
+                            <TextBlock FontStyle="Oblique" FontSize="18" Text="{Binding ModelName}"/>
+                        </StackPanel>
+                        <ListBox ItemsSource="{Binding Descriptions}"/>
+                        <DataGrid IsReadOnly="True" ItemsSource="{Binding Parts}"/>
+                    </StackPanel>
                 </HierarchicalDataTemplate>
             </TreeView.ItemTemplate>
         </TreeView>

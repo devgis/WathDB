@@ -11,13 +11,21 @@ namespace WatchDBApp
     public class MainWindowViewModel
     {
         const string jsonfile = @"D:\Github\WathDB\Docs\ETAs\OK.json";
-        public List<CalibresItem> Calibres
+        public List<CalibresItem> CalibresAll
         {   get;
+            set;
+        }
+
+        public List<CalibresItem> Calibres
+        {
+            get;
             set;
         }
         public MainWindowViewModel()
         {
-            Calibres = JsonConvert.DeserializeObject<List<CalibresItem>>(File.ReadAllText(jsonfile));
+            CalibresAll = JsonConvert.DeserializeObject<List<CalibresItem>>(File.ReadAllText(jsonfile));
+
+            Calibres = CalibresAll.Take(10).ToList();
         }
     }
 }
